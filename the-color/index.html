@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Color</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <div class="header-top">
+          <header class="header">
+            <h1>🎨 The Color API</h1>
+          </header>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+
+        <div class="input-row">
+          <input id="hexInput" type="text" placeholder="#4f46e5 or rgb(79,70,229)" aria-label="Enter color" />
+          <button id="randomBtn" class="btn-primary" aria-label="Random color">Random</button>
+          <button id="searchBtn" class="btn-primary" aria-label="Search color">Search</button>
+          <button id="loadMoreBtn" class="btn-secondary hidden" aria-label="Load more random colors">Load More</button>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+        <div id="errorBox" class="error-box hidden" role="alert"></div>
+
+        <!-- Color Result -->
+        <div id="colorResult" class="color-result hidden">
+          <div class="swatch" id="swatch" aria-label="Color swatch"></div>
+          <div class="color-info">
+            <h2 id="name"></h2>
+            <div class="info-grid">
+              <div class="info-item"><span class="label">HEX</span><span id="hex" class="value"></span></div>
+              <div class="info-item"><span class="label">RGB</span><span id="rgb" class="value"></span></div>
+              <div class="info-item"><span class="label">HSL</span><span id="hsl" class="value"></span></div>
+              <div class="info-item"><span class="label">CMYK</span><span id="cmyk" class="value"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Palette -->
+        <div id="paletteBox" class="palette hidden">
+          <h3 class="palette-title">🎯 Suggested Palette</h3>
+          <div id="paletteGrid" class="palette-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

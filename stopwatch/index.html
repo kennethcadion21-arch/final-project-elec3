@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Stopwatch</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <div class="header-top">
+          <header class="header">
+            <h1>⏱️ Stopwatch</h1>
+            <p class="sub">Space: Start/Pause | L: Lap | R: Reset</p>
+          </header>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </div>
+
+        <div class="time" id="time" aria-live="polite" role="status">00:00:00.00</div>
+
+        <div class="controls controls--3">
+          <button class="btn btn--primary" id="startPause" aria-label="Start or pause the stopwatch">Start</button>
+          <button class="btn btn--secondary" id="lap" disabled aria-label="Record a lap time">Lap</button>
+          <button class="btn btn--danger" id="reset" disabled aria-label="Reset the stopwatch">Reset</button>
+        </div>
+
+        <div class="lap-list" id="lapList" aria-live="polite" aria-label="Lap times"></div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <div class="header-top">
+          <header class="header">
+            <h1>📱 Calculator</h1>
+            <p class="sub">⌨️ Keyboard: 0-9, + − × ÷, Enter, Backspace, Esc</p>
+          </header>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </div>
+
+        <div class="display" aria-live="polite" role="status">
+          <div class="expression" id="expression"></div>
+          <div class="result" id="result">0</div>
+        </div>
+
+        <div class="grid" id="keys">
+          <button class="key key--fn" data-action="clear" aria-label="Clear all">AC</button>
+          <button class="key key--fn" data-action="backspace" aria-label="Backspace">⌫</button>
+          <button class="key key--fn" data-action="sign" aria-label="Toggle sign">±</button>
+          <button class="key key--op" data-op="/" aria-label="Divide">÷</button>
+
+          <button class="key" data-digit="7">7</button>
+          <button class="key" data-digit="8">8</button>
+          <button class="key" data-digit="9">9</button>
+          <button class="key key--op" data-op="*" aria-label="Multiply">×</button>
+
+          <button class="key" data-digit="4">4</button>
+          <button class="key" data-digit="5">5</button>
+          <button class="key" data-digit="6">6</button>
+          <button class="key key--op" data-op="-" aria-label="Subtract">−</button>
+
+          <button class="key" data-digit="1">1</button>
+          <button class="key" data-digit="2">2</button>
+          <button class="key" data-digit="3">3</button>
+          <button class="key key--op" data-op="+" aria-label="Add">+</button>
+
+          <button class="key key--wide" data-digit="0">0</button>
+          <button class="key" data-action="dot" aria-label="Decimal point">.</button>
+          <button class="key key--eq" data-action="equals" aria-label="Equals">=</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

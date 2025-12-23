@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NomNom • TheMealDB Explorer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="app-shell">
+		<header class="app-header">
+			<div class="brand">
+				<div class="dot"></div>
+				<h1>NomNom</h1>
+			</div>
+			<div class="header-actions">
+				<label class="toggle" aria-label="Toggle dark mode">
+					<input type="checkbox" id="themeToggle" />
+					<span class="slider"></span>
+				</label>
+			</div>
+		</header>
+
+		<main class="app-main">
+			<section class="search-card glass">
+				<div class="search-fields">
+					<label for="searchInput">Search meals</label>
+					<div class="search-row">
+						<input id="searchInput" type="text" placeholder="e.g. pasta, chicken, curry" autocomplete="off" />
+						<button id="searchBtn" type="button">Search</button>
+						<button id="randomBtn" type="button" class="ghost">Random</button>
+					</div>
+				</div>
+				<p class="hint">Powered by TheMealDB • Click a card to see details</p>
+				<p id="error" role="status" class="error" aria-live="polite"></p>
+			</section>
+
+			<section class="grid-section">
+				<header class="section-header">
+					<div>
+						<p class="label">Results</p>
+						<h2 id="resultsTitle">Popular picks</h2>
+					</div>
+					<p id="resultCount" class="subtext">—</p>
+				</header>
+				<div id="resultsGrid" class="results-grid" aria-live="polite"></div>
+			</section>
+
+			<section class="detail-card glass" id="detailCard">
+				<div class="detail-hero">
+					<div>
+						<p class="label">Meal details</p>
+						<h2 id="mealTitle">Pick a meal</h2>
+						<p id="mealMeta" class="subtext">Category • Area • Tags</p>
+					</div>
+					<img id="mealThumb" src="" alt="" class="detail-thumb" />
+				</div>
+				<div class="detail-body">
+					<div class="detail-column">
+						<h3>Ingredients</h3>
+						<ul id="ingredients"></ul>
+					</div>
+					<div class="detail-column">
+						<h3>Instructions</h3>
+						<p id="instructions" class="instructions"></p>
+						<div id="links" class="links"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+    <footer class="app-footer">
+      <p>Powered by <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a></p>
+      <p>© 2025 NomNom • Recipe Explorer</p>
+    </footer>
+	<script src="script.js"></script>
+</body>
+</html>

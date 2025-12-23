@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modern Weather App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <div class="header-top">
+        <header class="header">
+          <h1>🌤️ Weather Forecast</h1>
+          <p class="sub">Search any city to get current weather + 5-day forecast</p>
+        </header>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+
+      <div class="input-row">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name..."
+          autocomplete="off"
+          aria-label="City input"
+        />
+        <button id="searchBtn" class="btn-primary">Search</button>
+      </div>
+
+      <!-- Location choices -->
+      <select id="placeSelect" class="hidden" aria-label="Choose location"></select>
+
+      <!-- Status + Error -->
+      <p id="status" class="status" aria-live="polite" role="status"></p>
+      <div id="errorBox" class="error-box hidden" role="alert"></div>
+
+      <!-- Current Weather -->
+      <div id="weatherResult" class="weather hidden">
+        <div class="weather-main">
+          <div class="weather-info">
+            <h2 id="cityName"></h2>
+            <p id="country" class="country-info"></p>
+            <p id="description" class="description"></p>
+          </div>
+
+          <div class="temp-block">
+            <span id="temp" class="temp"></span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+
+        <div class="weather-extra">
+          <div class="weather-item">
+            <span class="label">Feels like</span>
+            <span id="feelsLike" class="value"></span><span class="unit">°C</span>
+          </div>
+          <div class="weather-item">
+            <span class="label">Humidity</span>
+            <span id="humidity" class="value"></span><span class="unit">%</span>
+          </div>
+          <div class="weather-item">
+            <span class="label">Wind</span>
+            <span id="wind" class="value"></span><span class="unit">m/s</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-Day Forecast -->
+      <div id="forecastBox" class="forecast hidden">
+        <h3 class="forecast-title">📅 5-Day Forecast</h3>
+        <div id="forecastGrid" class="forecast-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
